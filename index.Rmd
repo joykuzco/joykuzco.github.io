@@ -10,9 +10,13 @@ Write additional code
 
 ### Add some links
 
-I like [find biking routes on strava](https://www.strava.com)
+I like to [find biking routes on strava](https://www.strava.com)
 
 I can link directly to my [about page](about.html)
+
+### Picture of my dog 
+
+<img src="images/orcas.png" style="width:90%">
 
 ```{r}
 
