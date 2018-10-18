@@ -13,4 +13,4 @@ navbar:
       href: http://github.com/<joykuzco>/
 output:
   html_document:
-    theme: minty
+    theme: flatly
