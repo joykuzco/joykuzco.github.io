@@ -7,3 +7,14 @@ title: "Holy cow!"
 And I can put all kinds of stuff on it!
 
 Write additional code
+
+### Add some links
+
+I like [find biking routes on strava](https://www.strava.com)
+
+I can link directly to my [about page](about.html)
+
+```{r}
+
+```
+
