@@ -285,13 +285,13 @@ div.tocify {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="http://google.com">
-    <span class=" google"></span>
-     
-  </a>
+  <a href="http://google.com">google</a>
 </li>
 <li>
   <a href="about.html">About</a>
+</li>
+<li>
+  <a href="DTA_L15_Plotly.html">Plotly</a>
 </li>
 <li>
   <a href="mailto:&lt;joy.hsu@columbia.edu&gt;">
@@ -328,20 +328,14 @@ div.tocify {
 <h3>Add some links</h3>
 <p>I like to <a href="https://www.strava.com">find biking routes on strava</a></p>
 <p>I can link directly to my <a href="about.html">about page</a></p>
+<p>I can link directly to my <a href="DTA_L15_Plotly.html">plotly page</a></p>
 </div>
 <div id="picture-of-my-dog" class="section level3">
 <h3>Picture of my dog</h3>
 <p><img src="images/orcas.png" style="width:90%"></p>
-<pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching packages ─────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
-<pre><code>## ✔ ggplot2 3.0.0     ✔ purrr   0.2.5
-## ✔ tibble  1.4.2     ✔ dplyr   0.7.6
-## ✔ tidyr   0.8.1     ✔ stringr 1.3.1
-## ✔ readr   1.1.1     ✔ forcats 0.3.0</code></pre>
-<pre><code>## ── Conflicts ────────────────────────────────────────────── tidyverse_conflicts() ──
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()</code></pre>
-<pre class="r"><code>tibble(
+<pre class="r"><code>library(tidyverse)
+
+tibble(
   x = 1:10,
   y = x + 2)</code></pre>
 <pre><code>## # A tibble: 10 x 2
