@@ -3,10 +3,12 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - icon: "google"
+    - text: "google"
       href: http://google.com
     - text: "About"
       href: about.html
+    - text: "Plotly"
+      href: DTA_L15_Plotly.html
     - icon: fa-envelope fa-lg
       href: mailto:<joy.hsu@columbia.edu>
     - icon: fa-github fa-lg

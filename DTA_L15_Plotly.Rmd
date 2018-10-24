@@ -41,7 +41,7 @@ nyc_airbnb =
   sample_n(5000)
 ```
 
-# 1. Plotly scatterplot
+### 1. Plotly scatterplot
 
 * scatterplot of nyc airbnb rentals, longitude and latitude
 * interactivity
@@ -54,5 +54,61 @@ nyc_airbnb %>%
           alpha = 0.5, 
           color = ~price,
           text = ~text_label)
+```
+
+### 2. Boxplots
+
+```{r}
+#obtain list of top 8 neighborhoods
+common_neighborhoods =
+  nyc_airbnb %>% 
+  count(neighbourhood, sort = TRUE) %>% 
+  top_n(8) %>% 
+  select(neighbourhood)
+
+#left_join to filter nyc_airbnb dataset with only the top 8 most common neighborhood
+inner_join(nyc_airbnb, common_neighborhoods,
+             by = "neighbourhood") %>% 
+  mutate(neighbourhood = fct_reorder(neighbourhood, price)) %>% 
+  plot_ly(y = ~price, color = ~neighbourhood, type = "box",
+          colors = "Set2")
+```
+
+### 3. Barplot
+
+```{r}
+nyc_airbnb %>% 
+  count(neighbourhood) %>% 
+  mutate(neighbourhood = fct_reorder(neighbourhood, n)) %>% 
+  plot_ly(x = ~neighbourhood, y = ~n, color = ~neighbourhood, type = "bar")
+```
+
+### 4. ggplotly
+
+Steps
+  1. create plot using ggplot, save
+  2. call ggplotly on scatterplot
+
+* generally, using plotly directly is faster than creating ggplot and converting to plotly graphic
+```{r}
+scatter_ggplot = 
+  nyc_airbnb %>%
+  ggplot(aes(x = longitude, y = latitude, color = price)) +
+  geom_point(alpha = 0.25) +
+  scale_color_viridis() +
+  coord_cartesian() +
+  theme_classic()
+
+ggplotly(scatter_ggplot)
+```
+
+### 5. flexdashboard
+
+* see template script for flexdashboard
+* copy and paste into flexdashboard template
+* Column {data-width=650}, flexdashboard automatically assumes width of 1000, can partition as needed
+
+```{r}
+
 ```
 
