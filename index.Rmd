@@ -6,7 +6,7 @@ output:
       toc_float: true
 ---
 
-<img src="images/me.jpg" style="width:90%">
+<img src="images/me.jpg" style="width:50%">
 
 ```{r, include=FALSE}
 library(tidyverse)

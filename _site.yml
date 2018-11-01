@@ -6,7 +6,7 @@ navbar:
     - text: "About"
       href: about.html
     - text: "CV"
-      href: /CV/Resume_JHsu_2018.pdf
+      href: /CV/Github_Resume_2018Oct.pdf
     - icon: fa-envelope fa-lg
       href: mailto:<joy.hsu@columbia.edu>
     - icon: fa-linkedin-square
