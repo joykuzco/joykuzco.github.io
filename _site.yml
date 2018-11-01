@@ -6,7 +6,7 @@ navbar:
     - text: "google"
       href: http://google.com
     - text: "About"
-      href: about.html
+      href: pg_about.html
     - text: "Plotly"
       href: DTA_L15_Plotly.html
     - icon: fa-envelope fa-lg
