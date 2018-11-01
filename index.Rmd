@@ -1,34 +1,27 @@
 ---
-title: "Holy cow!"
+title: "Joy Hsu"
 output: 
   html_document:
       toc: true
       toc_float: true
 ---
 
-### I have a webpage!
+<img src="images/me.jpg" style="width:90%">
+
+```{r, include=FALSE}
+library(tidyverse)
+```
+
+### About Me
 
 And I can put all kinds of stuff on it!
 
 Write additional code
 
-### Add some links
+### Flex Dashboard
 
-I like to [find biking routes on strava](https://www.strava.com)
+Link to [about page](pg_about.html)
 
-I can link directly to my [about page](pg_about.html)
+Link to [flexdashboard page](pg_flexdashboard.html)
 
-I can link directly to my [plotly page](DTA_L15_Plotly.html)
-
-### Picture of my dog 
-
-<img src="images/orcas.png" style="width:90%">
-
-```{r}
-library(tidyverse)
-
-tibble(
-  x = 1:10,
-  y = x + 2)
-```
-
+### CV

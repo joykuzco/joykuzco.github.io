@@ -9,8 +9,10 @@ navbar:
       href: /CV/Resume_JHsu_2018.pdf
     - icon: fa-envelope fa-lg
       href: mailto:<joy.hsu@columbia.edu>
+    - icon: fa-linkedin-square
+      href: https://www.linkedin.com/in/joy-hsu-11943169/
     - icon: fa-github fa-lg
-      href: http://github.com/<joykuzco>/
+      href: https://github.com/joykuzco
 output:
   html_document:
     theme: flatly
