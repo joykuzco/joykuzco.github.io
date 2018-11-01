@@ -6,7 +6,7 @@ output:
       toc_float: true
 ---
 
-<img src="images/me.jpg" style="width:50%">
+<img src="images/me.jpg" style="width:30%">
 
 ```{r, include=FALSE}
 library(tidyverse)
@@ -14,14 +14,12 @@ library(tidyverse)
 
 ### About Me
 
-And I can put all kinds of stuff on it!
+I am a graduate student in the Biostatistics Department at Columbia University. 
 
-Write additional code
+And I can put all kinds of stuff on it!
 
 ### Flex Dashboard
 
 Link to [about page](pg_about.html)
 
 Link to [flexdashboard page](pg_flexdashboard.html)
-
-### CV
