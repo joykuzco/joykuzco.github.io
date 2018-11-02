@@ -1,0 +1,101 @@
+---
+title: "flexdashboard page"
+output:
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(viridis)
+library(p8105.datasets)
+library(plotly)
+
+set.seed(1)
+```
+
+# orientation
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+#read and clean ny_noaa
+#1st Plot
+ny_noaa = p8105.datasets::ny_noaa %>% 
+  janitor::clean_names() %>% 
+  separate(date, into = c("year", "month", "day"), sep = "-") %>% 
+  mutate(
+    prcp = as.integer(prcp)/10,
+    snow = as.integer(snow),
+    snwd = as.integer(snwd),
+    tmax = as.integer(tmax)/10,
+    tmin = as.integer(tmin)/10, 
+    month = as.integer(month), 
+    month = month.abb[month],
+    month = forcats::fct_relevel(month, c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"))) %>% 
+  filter(
+    !is.na(tmax) & !is.na(tmin) & !is.na(snow) & !is.na(snwd) & !is.na(prcp),
+    year %in% c(2000:2010)) %>% 
+  sample_n(5000)
+
+ny_noaa %>% 
+  plot_ly(y = ~tmax, color = ~month, type = "box", colors = "Set2", text = ~year) %>% 
+    layout(
+      xaxis = list(title = "Month"), 
+      yaxis = list(title = "Max Temperature (Cº)"),
+      title = "New York Max Temperatures, 2000-2010")
+```
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+#2nd plot: Precipitation in January and July
+prcp_ny_noaa = ny_noaa %>% 
+  filter(prcp > 0 & prcp < 200) 
+
+prcp_ny_noaa1 = prcp_ny_noaa[which(prcp_ny_noaa$month == "Jan"),]
+density1 = density(prcp_ny_noaa1$prcp)
+
+prcp_ny_noaa2 = prcp_ny_noaa[which(prcp_ny_noaa$month == "Jul"),]
+density2 = density(prcp_ny_noaa2$prcp)
+
+plot_ly(
+  x = ~density1$x, y = ~density1$y, type = "scatter", 
+    mode = "lines", name = "January", fill = "tozeroy", alpha = .5) %>% 
+  add_trace(x = ~density2$x, y = ~density2$y, name = "July", fill = 'tozeroy') %>%
+  layout(
+    xaxis = list(title = "Precipitation (mm)"),
+    yaxis = list(title = "Density"),
+    title = "New York Precipitation Density, 2000-2010") %>% 
+  layout(legend = list(x = 0.3, y = 0.9))
+```
+
+### Chart C
+
+```{r}
+#3rd Plot: number of weather monitors by year
+ny_noaa_ids = p8105.datasets::ny_noaa %>% 
+  janitor::clean_names() %>% 
+  separate(date, into = c("year", "month", "day"), sep = "-") %>% 
+  group_by(year) %>% 
+  distinct(id) %>% 
+  summarise(ids_year = n())
+
+ny_noaa_ids %>% 
+  plot_ly(x = ~year, y = ~ids_year, type = "scatter", mode = "line") %>% 
+  add_trace(x = ~year, y = ~ids_year, type = "scatter", mode = "markers") %>% 
+  layout(
+    xaxis = list(title = "Year"),
+    yaxis = list(title = "Number of Weather Stations"),
+    title = "New York Weather Stations, 1981-2010",
+    showlegend = FALSE)
+```

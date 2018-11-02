@@ -14,12 +14,12 @@ library(tidyverse)
 
 ### About Me
 
-I am a M.S. graduate student in the Biostatistics Department at Columbia University. In my previous life on the west coast (best coast), I worked on IVD clinical trials for blood donation screening. I am passionate about the role of infectious disease surveillance in the clinical realm, whether it's assessing the safety of novel viral therapeutics or monitoring blood products for emerging infectious agents. 
+Hello! I am an M.S. Candidate in the Biostatistics Department at Columbia University. 
+
+In the past 4 years, I worked in the clinical research field for drug and medical device development. Most recently, I worked on IVD clinical trials for blood donation screening, on NAT platforms. In my career, I plan to leverage data science to meet challenges in disease prevention, diagnosis, and therapeutics. Particularly, I am interested in clinical trial designs that focus on representation of minority groups and subpopulations. 
 
 In my free time, you can find me chasing waterfalls and alpine meadows.
 
-### Flex Dashboard
+### [New York Weather Data from RNOAA](pg_flexdashboard.html)
 
-Link to [about page](pg_about.html)
-
-Link to [flexdashboard page](pg_flexdashboard.html)
+As a recent Vancouver/San Diego transplant preparing to weather my first East Coast winter, I have sketched [a few figures](pg_flexdashboard.html) on New York weather trends. Hopefully, this will help you plot your winter wardrobe too. 

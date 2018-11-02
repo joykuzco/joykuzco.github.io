@@ -3,8 +3,6 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "About"
-      href: about.html
     - text: "CV"
       href: CV/Github_Resume_2018Oct.pdf
     - icon: fa-envelope fa-lg
