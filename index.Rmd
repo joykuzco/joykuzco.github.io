@@ -1,6 +1,9 @@
 ---
 title: "Joy Hsu"
-output: html_document
+output: 
+    html_document:
+      toc: true
+      toc_float: true
 ---
 
 <img src="images/me.jpg" style="width:40%">
