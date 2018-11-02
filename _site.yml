@@ -4,7 +4,7 @@ navbar:
   title: "Home"
   right:
     - text: "CV"
-      href: CV/Github_Resume_2018Oct.pdf
+      href: about.html
     - icon: fa-envelope fa-lg
       href: mailto:<joy.hsu@columbia.edu>
     - icon: fa-linkedin-square

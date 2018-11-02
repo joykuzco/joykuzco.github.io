@@ -3,7 +3,7 @@ title: "Joy Hsu"
 output: html_document
 ---
 
-<img src="images/me.jpg" style="width:50%">
+<img src="images/me.jpg" style="width:40%">
 
 ```{r, include=FALSE}
 library(tidyverse)
