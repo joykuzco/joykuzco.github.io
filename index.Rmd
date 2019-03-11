@@ -14,12 +14,16 @@ library(tidyverse)
 
 ### About Me
 
-Hello! I am an M.S. Candidate in the Biostatistics Department at Columbia University. 
+Hello! I am an M.S. Candidate in the Biostatistics Department at Columbia University. Currently, I am working with Dr. Brent William's group as a Research Assistant at the Center for Infection & Immunity. I am studying the placental microbiome and identifying risk factors in adverse birth outcomes, using demographic and metagenomic sequencing data. 
 
-In the past 4 years, I worked in the clinical research field for drug and medical device development. Most recently, I worked on IVD clinical trials for blood donation screening, on NAT platforms. In my career, I plan to leverage data science to meet challenges in disease prevention, diagnosis, and therapeutics. Particularly, I am interested in clinical trial designs that focus on representation of minority groups and subpopulations. 
+Prior to my graduate program, I worked in the biotech industry on drug and medical device clinical trials. Most recently, I collaborated on IVD clinical studies for high-throughput virus screening of blood donation products. In my career, I want to leverage data science to meet challenges in disease prevention, diagnosis, and therapeutics. 
 
 In my free time, you can find me chasing waterfalls and alpine meadows.
 
 ### [New York Weather Data from RNOAA](pg_flexdashboard.html)
 
 As a recent Vancouver/San Diego transplant preparing to weather my first East Coast winter, I have sketched [a few figures](pg_flexdashboard.html) on New York weather trends. Hopefully, this will help you plot your winter wardrobe too. 
+
+### [Geographic Associations Between Industrial Waste Release and Cancer Incidence](https://toxgisfinalproject.github.io/toxcancer.github.io/index.html)
+
+For a Data Science group project, we investigated the geographic associations between industrial waste release and cancer incidence rates. Our dataset included the Toxic Releases Inventory compiled by the U.S. Environmental Protection Agency, which describes annual waste release from industrial sites since 1987. We focused on chemicals that were known carcinogens and modeled the correlation between annual release (pounds by land, air, water routes) and county level lung cancer incidence.
